@@ -1,6 +1,6 @@
 ---
 name: diagnosing-bugs
-description: Diagnosis loop for hard bugs and performance regressions. Use when the user says "diagnose"/"debug this", or reports something broken/throwing/failing/slow.
+description: Use when a bug arrives without a command that reproduces it yet: a bug report, a needs-triage ticket, an intermittent flake, a performance regression, or the user says "diagnose"/"debug this". A failure inside a test or build you are already running goes to superpowers:systematic-debugging instead.
 ---
 
 # Diagnosing Bugs
@@ -119,7 +119,7 @@ A correct seam is one where the test exercises the **real bug pattern** as it oc
 
 **If no correct seam exists, that itself is the finding.** Note it. The codebase architecture is preventing the bug from being locked down. Flag this for the next phase.
 
-If a correct seam exists:
+If a correct seam exists, run the loop from superpowers:test-driven-development:
 
 1. Turn the minimised repro into a failing test at that seam.
 2. Watch it fail.

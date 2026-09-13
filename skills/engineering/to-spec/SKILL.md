@@ -16,7 +16,16 @@ The issue tracker and triage label vocabulary should have been provided to you. 
 
 Check with the user that these seams match their expectations.
 
-3. Write the spec using the template below, then publish it to the project issue tracker. Apply the `ready-for-agent` triage label - no need for additional triage.
+3. Write the spec using the template below, then publish it to the project issue tracker. Apply the `spec` label (create it if the tracker lacks it). A spec is a parent, never a task: it does not carry `ready-for-agent`; its child tickets get that label from `/to-tickets`. If a design doc was committed for this design, link it under Further Notes.
+
+4. Self-review the published body with fresh eyes and fix inline on the tracker:
+
+   - **Placeholders**: any TBD, TODO, or vague requirement.
+   - **Consistency**: sections that contradict each other.
+   - **Scope**: focused enough for `/to-tickets` to slice, or does it need decomposing into sub-specs?
+   - **Ambiguity**: a requirement readable two ways; pick one and say so.
+
+   Then tell the user the spec's number and that `/to-tickets #<n>` is the next step.
 
 <spec-template>
 

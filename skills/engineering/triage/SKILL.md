@@ -23,10 +23,13 @@ Every comment or issue posted to the issue tracker during triage **must** start 
 
 ## Roles
 
-Two **category** roles:
+Three **category** roles:
 
 - `bug`: something is broken
 - `enhancement`: new feature or improvement
+- `chore`: maintenance with no user-visible behaviour change (dependencies, CI, refactors)
+
+Two **modifier** labels, applied beside the category and state: `urgent` (production is broken; the issue jumps the frontier) and `area:<name>` (the part of the codebase touched). `spec` marks a parent issue that `/to-tickets` slices; a spec is never triaged as a task.
 
 Five **state** roles:
 
